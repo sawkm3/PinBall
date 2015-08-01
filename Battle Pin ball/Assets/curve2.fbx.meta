@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 73373f486598f7946b1e18c32d370f17
+timeCreated: 1435909084
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: curve:pCube1
+    100004: curve:pCube2
+    100006: curve:pCube3
+    100008: curve:pCube4
+    100010: curve:pCube5
+    100012: curve:pCylinder1
+    100014: curve:transform1
+    100016: curve:transform2
+    100018: curve:transform3
+    100020: curve:transform4
+    100022: curve:transform5
+    100024: curve:transform6
+    100026: FurFeedback
+    100028: pCube1
+    100030: pCube2
+    100032: pCube3
+    100034: pCube4
+    100036: pCylinder1
+    100038: pCylinder2
+    100040: pSphere1
+    100042: transform1
+    100044: transform2
+    100046: transform3
+    100048: transform4
+    100050: transform5
+    100052: transform6
+    400000: //RootNode
+    400002: curve:pCube1
+    400004: curve:pCube2
+    400006: curve:pCube3
+    400008: curve:pCube4
+    400010: curve:pCube5
+    400012: curve:pCylinder1
+    400014: curve:transform1
+    400016: curve:transform2
+    400018: curve:transform3
+    400020: curve:transform4
+    400022: curve:transform5
+    400024: curve:transform6
+    400026: FurFeedback
+    400028: pCube1
+    400030: pCube2
+    400032: pCube3
+    400034: pCube4
+    400036: pCylinder1
+    400038: pCylinder2
+    400040: pSphere1
+    400042: transform1
+    400044: transform2
+    400046: transform3
+    400048: transform4
+    400050: transform5
+    400052: transform6
+    2300000: curve:pCube5
+    3300000: curve:pCube5
+    4300000: curve:pCube5
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
