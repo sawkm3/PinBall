@@ -3,7 +3,6 @@ using System.Collections;
 
 public class SideShoot : MonoBehaviour {
 
-	public int direction;
 	public Transform shoot;
 	Rigidbody shootrb;
 	int count;
@@ -20,7 +19,7 @@ public class SideShoot : MonoBehaviour {
 	void Update () {
 		// カウンタが0のとき，球を発射（シリンダに力を与える）
 		if (count-- == 0) {
-			shootrb.AddForce (direction * transform.right * 80000);
+			shootrb.AddForce (-transform.right * 80000);
 		}
 	}
 

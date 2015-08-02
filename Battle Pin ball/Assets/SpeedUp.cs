@@ -3,8 +3,6 @@ using System.Collections;
 
 public class SpeedUp : MonoBehaviour {
 
-	public int direction;
-
 	void OnTriggerStay(Collider collider)
 	{
 		if (collider.name == "Ball(Clone)") {
@@ -14,7 +12,7 @@ public class SpeedUp : MonoBehaviour {
 			if (0 < rb.velocity.y)
 			{
 				// 三角形バンパの上面に衝突したとき，ボールに上方向の力を与える
-				rb.AddForce(direction * transform.right * 200);
+				rb.AddForce(-transform.right * 200);
 			}
 		}
 	}
