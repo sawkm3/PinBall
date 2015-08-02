@@ -6,7 +6,9 @@ public class HookRight : MonoBehaviour {
 	HingeJoint hinge;
 	JointSpring originSpring;
 	JointSpring turnedSpring;
-	
+
+	private PhotonView photonView;
+
 	// Use this for initialization
 	void Start () {
 		hinge = GetComponent<HingeJoint>();
@@ -19,20 +21,25 @@ public class HookRight : MonoBehaviour {
 		turnedSpring.spring = originSpring.spring;
 		turnedSpring.damper = originSpring.damper;
 		turnedSpring.targetPosition = -60;
+
+		photonView = PhotonView.Get(this);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-		float turn = Input.GetAxisRaw ("Horizontal");
 
-		// 右キーが押されている間，右のフリッパーのヒンジの力を逆方向にする
-		if (0.0f < turn) {
-			hinge.spring = turnedSpring;
-		// 右キーが離されている間，右のフリッパーのヒンジの力を順方向にする
-		} else {
-			//hinge.spring = spring;
-			hinge.spring = originSpring;
+		if (photonView.isMine) {
+
+			bool turn = Input.GetKey(KeyCode.RightArrow);
+
+			// 右キーが押されている間，右のフリッパーのヒンジの力を逆方向にする
+			if (turn) {
+				hinge.spring = turnedSpring;
+				// 右キーが離されている間，右のフリッパーのヒンジの力を順方向にする
+			} else {
+				//hinge.spring = spring;
+				hinge.spring = originSpring;
+			}
 		}
 	}
 }

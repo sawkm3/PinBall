@@ -8,6 +8,8 @@ public class HookLeft : MonoBehaviour {
 	JointSpring originSpring;
 	JointSpring turnedSpring;
 
+	private PhotonView photonView;
+
 	// Use this for initialization
 	void Start () {
 //		rb = GetComponent<Rigidbody>();
@@ -21,22 +23,27 @@ public class HookLeft : MonoBehaviour {
 		turnedSpring.spring = originSpring.spring;
 		turnedSpring.damper = originSpring.damper;
 		turnedSpring.targetPosition = 60;
+
+		photonView = PhotonView.Get(this);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		float turn = Input.GetAxisRaw ("Horizontal");
+		if (photonView.isMine) {
 
-		// 左キーが押されている間，左のフリッパーのヒンジの力を逆方向にする
-		if (turn < 0.0f) {
-			//rb.AddTorque (transform.up * turn * 10000000);
-			//hinge.spring = new JointSpring();
-			hinge.spring = turnedSpring;
-		// 左キーが離されている間，左のフリッパーのヒンジの力を順方向にする
-		} else {
-			//hinge.spring = spring;
-			hinge.spring = originSpring;
+			bool turn = Input.GetKey(KeyCode.LeftArrow);
+
+			// 左キーが押されている間，左のフリッパーのヒンジの力を逆方向にする
+			if (turn) {
+				//rb.AddTorque (transform.up * turn * 10000000);
+				//hinge.spring = new JointSpring();
+				hinge.spring = turnedSpring;
+			// 左キーが離されている間，左のフリッパーのヒンジの力を順方向にする
+			} else {
+				//hinge.spring = spring;
+				hinge.spring = originSpring;
+			}
 		}
 	}
 }
