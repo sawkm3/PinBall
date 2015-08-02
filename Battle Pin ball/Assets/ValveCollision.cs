@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// 使っていない
 public class ValveCollision : MonoBehaviour {
 
 	public static bool detect = false;
