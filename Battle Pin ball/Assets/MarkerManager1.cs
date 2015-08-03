@@ -15,13 +15,16 @@ public class MarkerManager1 : MonoBehaviour {
 	public Renderer renderer;
 	
 	// 必殺技モードのときの重力加速度
-	private static readonly Vector3 myGravity = new Vector3 (-0.25881f, -0.96592f, 0.0f);
+	private static readonly Vector3 myGravity = new Vector3 (-0.34202f, -0.93969f, 0.0f);
 	// 通常の重力加速度
 	private Vector3 gravity;
 
-	private static bool[] markerFlag = new bool[7];
+	private static bool[] markerFlag = {true, true, false, true, true, true, true};//new bool[7];
 
 	private int count;
+
+	// 必殺技の時間
+	private static readonly int gravitySeconds = 7;
 
 	// Use this for initialization
 	void Start () {
@@ -37,7 +40,7 @@ public class MarkerManager1 : MonoBehaviour {
 
 		// 必殺技発動中
 		if (0 < count) {
-			Physics.gravity = myGravity * (98.1f);
+			Physics.gravity = myGravity * 98.1f;
 		} else if (count == 0) {
 			Physics.gravity = gravity;
 		}
@@ -60,7 +63,7 @@ public class MarkerManager1 : MonoBehaviour {
 		}
 
 		// 必殺技発動
-		count = 7 * 60;
+		count = gravitySeconds * 60;
 	}
 
 	void OnTriggerEnter(Collider collider)

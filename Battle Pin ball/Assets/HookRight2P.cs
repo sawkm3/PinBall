@@ -1,19 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HookRight : MonoBehaviour {
-
+public class HookRight2P : MonoBehaviour {
+	
 	HingeJoint hinge;
 	JointSpring originSpring;
 	JointSpring turnedSpring;
-
+	
 	// Use this for initialization
 	void Start () {
 		hinge = GetComponent<HingeJoint>();
-
+		
 		// オリジナルのヒンジの情報を得る
 		originSpring = hinge.spring;
-
+		
 		// 打つ最中のヒンジの情報を作成
 		turnedSpring = new JointSpring ();
 		turnedSpring.spring = originSpring.spring;
@@ -23,8 +23,8 @@ public class HookRight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		bool turn = Input.GetKey(KeyCode.X);
-
+		bool turn = Input.GetKey(KeyCode.RightArrow);
+		
 		// 右キーが押されている間，右のフリッパーのヒンジの力を逆方向にする
 		if (turn) {
 			hinge.spring = turnedSpring;
